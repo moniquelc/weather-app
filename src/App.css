@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #9370DB, #cc3972, #23a6d5, #23d5ab);
+  background-size: 300% 300%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main {
+  height: 90vh;
+  /* background: #fff; */
+  /* box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75); */
+  width: 90%; /* 70% solves but makes it not centered */
+  margin: 0 auto;
+}
+
+.title-container {
+  height: 90vh;
+  background: url("./img/landscape1.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+}
+
+.title-container__title {
+  font-size: 50px;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-family: 'McLaren', cursive;
+}
+
+.title-container__title:hover {
+  animation-name: flash;
+  animation-duration: 3.5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.title-container__subtitle {
+  font-style: italic;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: "Merriweather", serif;
+}
+
+.form-container {
+  background-color: #2c3e50;
+  height: 90vh;
+  padding-top: 100px;
+  padding-left: 50px;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #20B2AA;
+  width: 30%;
+  padding-bottom: 4px;
+  color: #fff;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  margin: 0 2px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #20B2AA;
+  color: #fff;
+  font-weight: 100;
+}
+
+button:active {
+  outline: none;
+}
+
+.weather__info {
+  width: 60%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.weather__key {
+  color: #20B2AA;
+  border-bottom: solid 2px rgba(255,255,255,0.06);
+  padding: 20px 0 20px 0;
+  font-weight: 400;
+}
+
+.weather__key:last-child {
+  border: 0;
+}
+
+.weather__value {
+  color: #fff;
+  font-weight: 200;
+}
+
+.weather__error {
+  color: #20B2AA;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 450px){
+  input[type="text"]{
+    font-size: 15px;
+  }
+  .form-container {
+    padding-top: 30px;
+  }
+  .weather__info {
+    font-size: 17px;
+  }
+}
