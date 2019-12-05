@@ -2,6 +2,7 @@
 A responsive weather application using React.js that fetches data from a weather API based on Hamza Mirza's tutorial.
 
 ## Installation
+Open a terminal inside the projects directory and do the following commands:
 * npm install
 * npm start
 
